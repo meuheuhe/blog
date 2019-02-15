@@ -41,7 +41,7 @@
             
             <ul>
               <li><a class="{% if nbar == 'home' %}active{% endif %}" href="{%url 'home'%}">Home</a></li>
-              <li><a class="{% if new == 'new' %}acvite{% endif%}" href="{%url 'new'%}">글쓰기</a></li>
+              <li><a class="{% if nnbar == 'new' %}active{% endif %}" href="{%url 'new'%}">글쓰기</a></li>
 
               <li style="float:right"> {% if user.is_authenticated %}
             

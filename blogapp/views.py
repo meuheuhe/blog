@@ -16,14 +16,14 @@ def home(request):
     page = request.GET.get('page')
     #request된 페이지를 열어온ㄷ ㅟ return 해 준다
     posts= paginator.get_page(page)
-    return render(request, 'home.html', {'blogs':blogs, 'posts':posts, 'nbar':'home', 'bar':'new' })
+    return render(request, 'home.html', {'blogs':blogs, 'posts':posts, 'nbar':'home'})
 
 def detail(request, blog_id):
     details = get_object_or_404(Blog, pk=blog_id)
     return render(request, 'detail.html', {'details':details})
 
 def new(request): #new를 띄워주는 함수
-    return render(request, 'new.html')
+    return render(request, 'new.html',{'nnbar':'new' })
 
 def create(request): #입력받은 내용을 디비에 넣어주는 함수
     blog = Blog()
