@@ -16,7 +16,7 @@ def home(request):
     page = request.GET.get('page')
     #request된 페이지를 열어온ㄷ ㅟ return 해 준다
     # posts= paginator.get_page(page)
-    return render(request, 'home.html', {'blogs':blogs, 'posts':posts, 'nbar':'home'})
+    return render(request, 'home.html', {'blogs':blogs, 'nbar':'home'})
 
 def detail(request, blog_id):
     details = get_object_or_404(Blog, pk=blog_id)
